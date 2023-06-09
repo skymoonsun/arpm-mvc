@@ -15,4 +15,4 @@ folder2: ***http://localhost/folder2***
 
 <hr>
 
-Note: *The relevant php files are in the **/app** folder.*
+Note: *Related task files are in the **/app** folder.*
