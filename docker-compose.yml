@@ -1,14 +1,14 @@
 version: '3'
 
 networks:
-  arpm-network:
+  arpm-mvc-network:
 
 services:
 
   php:
     build:
       context: ./docker/php
-    container_name: arpm-php
+    container_name: arpm-mvc-php
     environment:
       APP_ENV: dev
     volumes:
@@ -17,11 +17,11 @@ services:
       - '9000:9000'
     restart: always
     networks:
-      - arpm-network
+      - arpm-mvc-network
 
   nginx:
     image: nginx:stable-alpine
-    container_name: arpm-nginx
+    container_name: arpm-mvc-nginx
     ports:
       - '80:80'
     volumes:
@@ -31,4 +31,4 @@ services:
       - php
     restart: always
     networks:
-      - arpm-network
+      - arpm-mvc-network
